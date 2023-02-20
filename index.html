@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html data-theme="cupcake" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <!-- daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="w-9/12 mx-auto">
+        <h1 class="text-5xl text-red-500 text-center font-semibold mt-12 mb-5">Enter Your Budget</h1>
+        <input class="bg-slate-200 p-3 font-medium text-xl w-full" type="number" name="" id="budget-field">
+        <h1 class="text-4xl text-red-500 text-center font-semibold mt-5">Valentine Budget <span id="valentine-budget">0</span></h1>
+    </header>
+    <section class="grid grid-cols-4 w-9/12 mx-auto gap-5 justify-center items-center">
+          <!-- card 1 -->
+          <div class="card bg-base-100 shadow-xl mt-5">
+            <figure class="px-10 pt-10">
+              <img src="images/kikat.png" alt="KitKat" class="rounded-xl">
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">KitKat Chocolate: <span id="kitkat-price">200</span></h2>
+              <input class="bg-slate-200 p-3 font-medium text-xl" placeholder="Type your quantity" type="number" name="" id="kikat-field">
+              <div class="card-actions">
+                <button id="btn-buy-kitkat" class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="card bg-base-100 shadow-xl mt-5">
+            <figure class="px-10 pt-10">
+              <img src="images/flowers.jpg" alt="flowers" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Flowers: <span id="flowers-price">400</span> </h2>
+              <input class="bg-slate-200 p-3 font-medium text-xl" placeholder="Type your quantity" type="number" name="" id="flowers-field">
+              <div class="card-actions">
+                <button id="btn-buy-flowers" class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="card bg-base-100 shadow-xl mt-5">
+            <figure class="px-10 pt-10">
+              <img src="images/diary.jpg" alt="diary" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Diary: <span id="diary-price">300</span> </h2>
+              <input class="bg-slate-200 p-3 font-medium text-xl" placeholder="Type your quantity" type="number" name="" id="diary-field">
+              <div class="card-actions">
+                <button id="btn-buy-diary" class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 4 - calculation card -->
+          <div class="bg-base-100 border border-cyan-600 mt-5">
+            <h1 class="text-3xl text-center font-semibold">Total Cost: <span id="total">00</span></h1>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">KiKat: <span id="kitkat-total"></span> </h2>
+              <h2 class="card-title">Flowers: <span id="flowers-total"></span> </h2>
+              <h2 class="card-title">Diary: <span id="diary-total"></span> </h2>
+              <h2 class="card-title bg-sky-400">Use Promo Code for 10% Discount</h2>
+              <input class="bg-slate-200 p-3 font-medium text-xl" placeholder="101" type="text" name="" id="discount-promo">
+              <div class="card-actions">
+                <button id="btn-apply" class="btn btn-primary">Apply</button>
+              </div>
+            </div>
+            <h1 class="text-3xl text-center font-semibold">Total Cost After Discount: <span id="discount-total">00</span></h1>
+          </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
